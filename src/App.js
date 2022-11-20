@@ -2,7 +2,7 @@ import './App.scss';
 
 function App() {
   return (
-    <div className='container test'>
+    <div className='container'>
       <h1>Eric Malcolm</h1>
       <h2>
         Front-End Developer / Architect specializing in UX and Accessibility,
