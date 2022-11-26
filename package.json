@@ -20,10 +20,12 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
+		"test-coverage": "react-scripts test --coverage",
 		"eject": "react-scripts eject",
 		"typescript": "tsc --project tsconfig.json --noEmit",
 		"lint": "eslint . --fix --max-warnings=0",
-		"format": "prettier . --write"
+		"format": "prettier . --write",
+		"prepare": "husky install"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -52,7 +54,27 @@
 		"eslint-plugin-n": "^15.5.1",
 		"eslint-plugin-promise": "^6.1.1",
 		"eslint-plugin-react": "^7.31.11",
+		"husky": "^8.0.2",
+		"lint-staged": "^13.0.4",
 		"prettier": "2.8.0",
 		"typescript": "^4.9.3"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": "npm run lint",
+		"*.{js,css,md,html,json}": "npm run format"
+	},
+	"jest": {
+		"coverageThreshold": {
+			"global": {
+				"lines": 95
+			}
+		},
+		"collectCoverageFrom": [
+			"./*.{js,jsx,ts,tsx}",
+			"./**/*.{js,jsx,ts,tsx}",
+			"./src/**/*.{js,jsx,ts,tsx}",
+			"!**/node_modules/**",
+			"!**/vendor/**"
+		]
 	}
 }
