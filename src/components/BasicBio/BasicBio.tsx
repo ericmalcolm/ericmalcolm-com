@@ -1,17 +1,17 @@
 import React from 'react';
-import './App.scss';
+import './BasicBio.scss';
 
-interface AppProps {
+interface BasicBioProps {
 	name: string;
 	mainDescription: string;
 	subDescription: string;
 }
 
-export const App = ({
+export const BasicBio = ({
 	name,
 	mainDescription,
 	subDescription,
-  }: AppProps):JSX.Element => {
+  }: BasicBioProps):JSX.Element => {
 	return (
 		<div className="container">
 			<h1>{name}</h1>
@@ -31,5 +31,5 @@ export const App = ({
 	);
 };
 
-export default App;
+export default BasicBio;
 
