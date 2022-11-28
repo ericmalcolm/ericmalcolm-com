@@ -39,26 +39,32 @@ export const Billboard = (): JSX.Element => {
 					I help architect and develop solutions to create usable,
 					human-friendly and accessible websites, interfaces, and apps.
 				</p>
-				<p>
-					<a
-						href="https://www.linkedin.com/in/ericmalcolm/"
-						aria-label="View Eric Malcolm's LinkedIn Profile"
-					>
-						LinkedIn
-					</a>{' '}
-					<a
-						href="/Eric-Malcolm_Resume.pdf"
-						aria-label="View Eric Malcolm's Resume in PDF Form"
-					>
-						Resume (PDF)
-					</a>
-					<a
-						href="https://github.com/ericmalcolm"
-						aria-label="View Eric Malcolm's GitHub Repos"
-					>
-						GitHub
-					</a>
-				</p>
+				<ul>
+					<li>
+						<a
+							href="https://www.linkedin.com/in/ericmalcolm/"
+							aria-label="View Eric Malcolm's LinkedIn Profile"
+						>
+							LinkedIn
+						</a>
+					</li>
+					<li>
+						<a
+							href="/Eric-Malcolm_Resume.pdf"
+							aria-label="View Eric Malcolm's Resume in PDF Form"
+						>
+							Resume (PDF)
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://github.com/ericmalcolm"
+							aria-label="View Eric Malcolm's GitHub Repos"
+						>
+							GitHub
+						</a>
+					</li>
+				</ul>
 			</section>
 		</section>
 	);
