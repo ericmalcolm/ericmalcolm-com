@@ -13,7 +13,7 @@ export const BasicBio = ({
 	subDescription,
   }: BasicBioProps):JSX.Element => {
 	return (
-		<div className="container">
+		<section className="container">
 			<h1>{name}</h1>
 			<h2>
 				{mainDescription}
@@ -27,7 +27,7 @@ export const BasicBio = ({
 			>
 				LinkedIn
 			</a>
-		</div>
+		</section>
 	);
 };
 

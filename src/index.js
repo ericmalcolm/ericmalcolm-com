@@ -2,17 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 
-import BasicBio from './components/BasicBio/BasicBio';
-import basicBioData from './content/basicBioData.json';
+import Billboard from './components/Billboard/Billboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
 	<React.StrictMode>
-		<BasicBio
-			name={basicBioData.name}
-			mainDescription={basicBioData.mainDescription}
-			subDescription={basicBioData.subDescription}
-		/>
+		<Billboard />
 	</React.StrictMode>
 );

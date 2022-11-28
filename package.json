@@ -106,6 +106,7 @@
 			"./src/**/*.{js,jsx,ts,tsx}",
 			"!**/*.stories.{js,jsx,ts,tsx}",
 			"!./src/index.js",
+			"!./src/index.d.ts",
 			"!**/node_modules/**",
 			"!**/vendor/**"
 		]
