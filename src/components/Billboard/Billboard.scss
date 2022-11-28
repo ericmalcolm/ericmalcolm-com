@@ -1,15 +1,54 @@
 .billboard {
-	background: darkgray;
+	background: black;
+	background-repeat: no-repeat;
+	background-position: -500px center;
+	color: white;
 
+	//TODO: potentially handle resize/repositioning of background with state and hooks.
 	@media (min-width: 768px) {
 		display: flex;
 		min-height: 666px;
-		background-image: url('https://via.placeholder.com/1480x666');
-		background-repeat: no-repeat;
+	}
+	@media (min-width: 900px) {
+		background-position: -400px center;
+	}
+	@media (min-width: 1024px) {
+		background-position: -300px center;
+	}
+	@media (min-width: 1120px) {
+		background-position: -200px center;
+	}
+	@media (min-width: 1200px) {
+		background-position: -100px center;
+	}
+	@media (min-width: 1280px) {
 		background-position: center;
 	}
 
 	&-header {
+		h1 {
+			font-weight: 900;
+			font-size: 40px;
+			@media (min-width: 768px) {
+				font-size: 60px;
+				margin-top: 10px;
+			}
+			@media (min-width: 900px) {
+				font-size: 80px;
+				margin-top: 10px;
+			}
+			@media (min-width: 1024px) {
+				font-size: 100px;
+			}
+		}
+		&__content {
+			padding: 20px;
+			position: absolute;
+			top: 0;
+			@media (min-width: 768px) {
+				position: relative;
+			}
+		}
 		&__image {
 			img {
 				width: 100%;
@@ -23,6 +62,7 @@
 				justify-content: center;
 			}
 			&--mobile {
+				display: flex;
 				@media (min-width: 480px) {
 					display: none;
 				}
@@ -30,19 +70,11 @@
 			&--tablet {
 				display: none;
 				@media (min-width: 480px) {
-					display: block;
+					display: flex;
 				}
 				@media (min-width: 768px) {
 					display: none;
 				}
-			}
-		}
-		&__content {
-			padding: 20px;
-			position: absolute;
-			top: 0;
-			@media (min-width: 768px) {
-				position: relative;
 			}
 		}
 	}
@@ -51,11 +83,32 @@
 		padding: 20px;
 		align-self: center;
 		margin-left: auto;
+		background: #201914;
+
 		@media (min-width: 768px) {
 			max-width: 340px;
+			background: none;
 		}
 		@media (min-width: 1200px) {
 			max-width: 440px;
+		}
+
+		h2 {
+			font-size: 24px;
+			@media (min-width: 768px) {
+				font-size: 28px;
+			}
+		}
+		p {
+			font-size: 18px;
+		}
+		a {
+			color: white;
+			// TODO: remove this once link's are established.
+			margin-right: 20px;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 }
