@@ -1,0 +1,61 @@
+.billboard {
+	background: darkgray;
+
+	@media (min-width: 768px) {
+		display: flex;
+		min-height: 666px;
+		background-image: url('https://via.placeholder.com/1480x666');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&-header {
+		&__image {
+			img {
+				width: 100%;
+				height: auto;
+			}
+			@media (min-width: 370px) {
+				max-height: 470px;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			&--mobile {
+				@media (min-width: 480px) {
+					display: none;
+				}
+			}
+			&--tablet {
+				display: none;
+				@media (min-width: 480px) {
+					display: block;
+				}
+				@media (min-width: 768px) {
+					display: none;
+				}
+			}
+		}
+		&__content {
+			padding: 20px;
+			position: absolute;
+			top: 0;
+			@media (min-width: 768px) {
+				position: relative;
+			}
+		}
+	}
+
+	&-description {
+		padding: 20px;
+		align-self: center;
+		margin-left: auto;
+		@media (min-width: 768px) {
+			max-width: 340px;
+		}
+		@media (min-width: 1200px) {
+			max-width: 440px;
+		}
+	}
+}
