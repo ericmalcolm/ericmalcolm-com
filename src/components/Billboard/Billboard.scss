@@ -1,3 +1,5 @@
+@import './../../constants/colors.scss';
+
 .billboard {
 	background: black;
 	background-repeat: no-repeat;
@@ -118,7 +120,7 @@
 		padding: 20px;
 		align-self: center;
 		margin-left: auto;
-		background: #201914;
+		background: $brown;
 		z-index: 2;
 
 		@media (min-width: 768px) {
